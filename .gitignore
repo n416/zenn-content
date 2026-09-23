@@ -1,2 +1,4 @@
 node_modules/
 .DS_Store
+# 有料（BOOTH）の本の図。svg2png.py がここへ一緒に書き出すので、上げない
+images/02-*
