@@ -3,7 +3,7 @@ title: "ReSpeaker Lite の ch1 を呼び名の聞き分けに使う（XIAO ESP32
 emoji: "🔌"
 type: "tech"
 topics: ["esp32", "respeaker", "xmos", "microwakeword", "arduino"]
-published: false
+published: true
 ---
 
 XIAO ESP32S3 ＋ ReSpeaker Lite で、呼び名（ウェイクワード）の聞き分けに渡す音を取り出すまで。公式の資料には書かれておらず、実機で総当たりして確かめた。
@@ -92,7 +92,7 @@ AGC を外すと増幅も無くなり、普通の声が RMS 36〜113 までし�
 
 ch0（取り出し口 3）と ch1（取り出し口 1）、それぞれ 4 倍と 16 倍の 4 通りを、同じ時に録った音で比べた。同じモデルで、呼びかけ 5 回への当たりと、呼んでいない所で越えた回数（25 秒）を数えた。
 
-ただし、この比較に使った録音は、後にモデルの良し悪しを測ると実機と合わないと分かった物である（【リンク：①】）。ch1 × 16 は当時この表で決め、今も使っているが、生の声で 4 通りを比べ直してはいない。
+ただし、この比較に使った録音は、後にモデルの良し悪しを測ると実機と合わないと分かった物である（[物差しは現物で録る](https://zenn.dev/n416/articles/wakeword-ja-measure)）。ch1 × 16 は当時この表で決め、今も使っているが、生の声で 4 通りを比べ直してはいない。
 
 | 入れ方 | 当たり | 誤爆 |
 |---|---|---|
@@ -123,4 +123,7 @@ ch1 は AGC が無いので、話しても RMS 40 前後にしかならない。
 
 実装は [n416/katanori](https://github.com/n416/katanori) の `firmware/esp32/src/AudioIo.cpp`（取り出し口の読み書きと、ch1 の倍率）。
 
-この音を使って日本語の呼び名を作った記録：【リンク：①】【リンク：③】
+この音を使って日本語の呼び名を作った記録：
+
+- [物差しは現物で録る](https://zenn.dev/n416/articles/wakeword-ja-measure)
+- [誰の声でも起きる呼び名へ](https://zenn.dev/n416/articles/wakeword-ja-general)
