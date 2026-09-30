@@ -75,6 +75,7 @@ PC のマイクで録った本人の呼びかけ（こちらは 28 本）は、�
 
 ## この先
 
+- 本人の声に合わせた合成音声で、持ち主専用の呼び名を作った手順：[② 合成音声で呼び名を作る](https://zenn.dev/n416s/articles/wakeword-ja-synth)
 - 誰の声でも起きる形に挑んで、届かなかった記録と部品：[誰の声でも起きる呼び名へ](https://zenn.dev/n416s/articles/wakeword-ja-general)
 - XIAO ESP32S3 ＋ ReSpeaker Lite で、網に渡す音を取り出す方法：[ReSpeaker Lite の ch1 を呼び名の聞き分けに使う](https://zenn.dev/n416s/articles/respeaker-lite-ch1)
 - この物差しの上で、合成音声を主な材料にして持ち主専用の呼び名を作る手順と道具一式は、BOOTH で頒布している：[自分の声で起きる呼び名を作る（BOOTH）](https://n416.booth.pm/items/8892534)
